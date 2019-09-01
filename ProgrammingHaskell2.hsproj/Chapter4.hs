@@ -119,6 +119,10 @@ x &&&& y = if x == True then (if y == True then True else False) else False
 a &&&&& b = if a == True then b else False
 
 
+-- 4.8.7
+
+mult :: Int -> Int -> Int -> Int
+mult = (\x -> (\y -> (\z -> x * y * z)))
 
 
 
