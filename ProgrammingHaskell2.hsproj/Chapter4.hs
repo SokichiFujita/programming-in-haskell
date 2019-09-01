@@ -41,9 +41,9 @@ not :: Bool -> Bool
 not False = True
 not True = False
 
-aa' :: Bool -> Bool -> Bool
-aa' True True  = True
-aa' _ _ = False
+(&&&) :: Bool -> Bool -> Bool
+True &&& True  = True
+_ &&& _ = False
 
 fst' :: (a,b) -> a
 fst' (a,_) = a
@@ -100,9 +100,11 @@ safetail''' :: [a] -> [a]
 safetail''' [] = [] 
 safetail''' xs  = tail xs
 
+-- 4.8.4
 
-
-
+(|||) :: Bool -> Bool -> Bool
+False ||| False  = False
+_     ||| _      = True
 
 
 
