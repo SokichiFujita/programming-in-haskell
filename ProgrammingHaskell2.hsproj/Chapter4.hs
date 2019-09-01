@@ -124,10 +124,16 @@ a &&&&& b = if a == True then b else False
 mult :: Int -> Int -> Int -> Int
 mult = (\x -> (\y -> (\z -> x * y * z)))
 
+-- 4.8.8
+
+luhnDouble :: Int -> Int
+luhnDouble x | 2 * x > 9 = 2 * x - 9
+             | otherwise = 2 * x
 
 
-
-
+luhn :: Int -> Int -> Int -> Int -> Bool
+luhn w x y z | ((luhnDouble w) + x + (luhnDouble y) + z) `mod` 10 == 0 = True
+             | otherwise = False
 
 
 

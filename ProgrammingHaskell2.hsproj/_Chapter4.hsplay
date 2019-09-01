@@ -107,6 +107,13 @@ False &&&&& True
 False &&&&& False
 True &&&&& True
 
+-- 4.8.8
 
+luhnDouble 3
+luhnDouble 6
+luhnDouble 9
+
+luhn 1 7 8 4
+luhn 4 7 8 3
 
 
