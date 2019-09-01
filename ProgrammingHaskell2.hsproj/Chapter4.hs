@@ -113,6 +113,10 @@ _     ||| _      = True
 x &&&& y = if x == True then (if y == True then True else False) else False
 
 
+-- 4.8.6
+
+(&&&&&) :: Bool -> Bool -> Bool
+a &&&&& b = if a == True then b else False
 
 
 

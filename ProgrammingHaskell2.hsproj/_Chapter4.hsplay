@@ -100,10 +100,12 @@ False &&&& False
 True &&&& True
 
 
+-- 4.8.6
 
-
-
- 
+True &&&&& False
+False &&&&& True
+False &&&&& False
+True &&&&& True
 
 
 
