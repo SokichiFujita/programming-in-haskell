@@ -17,4 +17,5 @@ executable ProgrammingHaskell2
     other-modules:
         Chapter3
         Chapter4
+        Chapter5
 
