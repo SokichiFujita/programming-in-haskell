@@ -92,6 +92,17 @@ False ||| True
 False ||| False
 True ||| True
 
+-- 4.8.5
+
+True &&&& False
+False &&&& True
+False &&&& False
+True &&&& True
+
+
+
+
+
  
 
 

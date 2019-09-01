@@ -107,6 +107,20 @@ False ||| False  = False
 _     ||| _      = True
 
 
+-- 4.8.5
+
+(&&&&) :: Bool -> Bool -> Bool
+x &&&& y = if x == True then (if y == True then True else False) else False
+
+
+
+
+
+
+
+
+
+
 
 
 
