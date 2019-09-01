@@ -1,11 +1,11 @@
-name: ProgrammingHaskell2ndEdition
+name: ProgrammingInHaskell2ndEdition
 version: 1.0
 cabal-version: 1.11
 build-type: Simple
-license: AllRightsReserved
+license: MIT
 stability: experimental
 description:
-    Reading note of Programming Haskell Second Edition
+    Reading note of Programming in Haskell Second Edition
 x-ghc-framework-version: 8.0.2-9.6-2
 x-last-ide-version: HfM1.6.1
 

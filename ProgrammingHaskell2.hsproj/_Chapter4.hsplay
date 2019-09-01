@@ -20,6 +20,12 @@ signum' 0
 
 -- 4.3
 
+abs'' 10
+abs'' (-10)
+
+abs''' 10
+abs''' (-10)
+
 signum'' (-10)
 signum'' 1000
 signum'' 0
@@ -46,7 +52,6 @@ isStartA "abc"
 
 -- 4.5 lambda
 
-
 (\x -> x * x) 100
 
 add' 10 20
@@ -67,8 +72,16 @@ third'' [1,2,3,4,5]
 
 third''' [1,2,3,4,5]
 
+-- 4.8.3
 
+safetail' []
+safetail' [1,2,3,4,5]
 
+safetail'' []
+safetail'' [1,2,3,4,5]
+
+safetail''' []
+safetail''' [1,2,3,4,5]
 
 
 
