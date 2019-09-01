@@ -1,0 +1,63 @@
+-- Haskell Playground 1.0
+-- 2.7.1
+
+-- 2.2 GHCi
+
+2+3*4
+(2+3)*4
+sqrt (3^2 + 4^2)
+
+-- 2.3 Prelude
+
+head [1,2,3,4,5]
+tail [1,2,3,4,5]
+[1,2,3,4,5] !! 2
+take 3 [1,2,3,4,5]
+drop 3 [1,2,3,4,5]
+length [1,2,3,4,5]
+sum [1,2,3,4,5]
+product [1,2,3,4,5]
+[1,2,3] ++ [4,5]
+reverse [1,2,3,4,5]
+
+-- 2.5
+
+quadruple 10
+take (double 2) [1,2,3,4,5]
+
+factorial 10
+average [1,2,3,4,5]
+
+-- 2.7.2
+
+2^3*4
+(2^3)*4
+
+2*3+4*5
+(2*3)+(4*5)
+
+2+3*4^5
+2+3*(4^5)
+
+-- 2.7.3
+
+n = a `div` length xs
+  where
+    a = 10
+    xs = [1,2,3,4,5]
+
+n
+
+-- 2.7.4
+
+myLast xs = drop (length xs-1) xs !! 0
+myLast2 xs = xs !! (length xs-1)
+
+myLast [1, 2, 3, 4, 5]
+myLast2 [1, 2, 3, 4, 5]
+
+-- 2.7.5
+
+myInit xs = take (length xs-1) xs
+myInit [1]
+

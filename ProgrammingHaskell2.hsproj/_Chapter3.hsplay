@@ -1,0 +1,73 @@
+-- Haskell Playground 1.0
+-- 3.1
+
+False
+False :: Bool
+
+not
+not :: Bool -> Bool
+
+
+not False :: Bool
+not True :: Bool
+not (not False) :: Bool
+
+
+-- 3.11.1
+
+['a','b','c']
+-- [Char]
+
+('a','b','c')
+-- (Char, Char, Char) 
+
+
+[(False,'0'),(True,'1')]
+-- [(Bool, Char)]
+
+([False,True],['0','1'])
+-- ([Bool], [Char])
+
+[tail, init, reverse]
+-- [[a]->[a]] 
+
+
+-- 3.11.2
+
+-- see Chapter3.hs
+
+
+-- 3.11.3
+
+second xs = head (tail xs)
+-- second :: [a] -> a
+
+swap (x,y) = (y,x)
+-- swap :: (a, b) -> (b, a)
+
+pair x y = (x,y)
+-- pair :: a -> b -> (a, b)
+
+double x = x*2
+-- double :: Num a => a -> a
+
+palindrome xs = reverse xs == xs
+-- palindrome :: Eq a => [a] -> Bool
+
+twice f x = f (f x)
+-- twice :: (a -> a) -> a -> a
+
+
+-- 3.11.4
+
+-- We used playground of Haskell for Mac instead of ghci.
+
+
+-- 3.11.5
+
+-- let f,g are functions. functions f equeals g means that for any x of domain f and g, equation f x = g x hold. Now, if we choose function f :: String -> String and g :: String -> String, then we can not confirm f x = g x for any x of String. Because String is countable but the cardinarity is infinite. We found the counter example of the question. Hence we proved that function type is not instance of Eq type class in general.
+-- However if we limit domain of function to countable finite set, we can confirm f x = g x. For the case, the function can be instance of Eq class.
+
+
+
+

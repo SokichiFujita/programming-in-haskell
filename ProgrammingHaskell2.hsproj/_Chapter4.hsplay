@@ -1,0 +1,79 @@
+-- Haskell Playground 1.0
+
+-- 4.1
+
+even' 3
+even' 4
+
+splitAt' 3 [1,2,3,4,5,6]
+
+recip (2/3)
+
+
+-- 4.2
+
+abs' (-100)
+
+signum' (-10)
+signum' 1000
+signum' 0
+
+-- 4.3
+
+signum'' (-10)
+signum'' 1000
+signum'' 0
+
+-- 4.4
+
+aa' True False
+
+fst' (1,2)
+
+-- cons
+
+[1,2,3]
+1:[2,3]
+1 : (2 : [3])
+1 : 2 : (3 : [])
+1 : 2 : 3 : []
+
+isStartA ['a', 'b']
+isStartA ['A', 'b']
+isStartA "Abc"
+isStartA "abc"
+
+
+-- 4.5 lambda
+
+
+(\x -> x * x) 100
+
+add' 10 20
+
+odds 10
+
+-- 4.8 exercise
+
+-- 4.8.1
+
+halve [1,2,3,4]
+
+-- 4.8.2
+
+third' [1,2,3,4,5]
+
+third'' [1,2,3,4,5]
+
+third''' [1,2,3,4,5]
+
+
+
+
+
+
+
+
+
+
+
