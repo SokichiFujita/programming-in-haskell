@@ -26,8 +26,8 @@ prime n = factors n == [1,n]
 primes :: Int -> [Int]
 primes n = [x | x <- [2..n], prime x]
 
-findKey :: Eq a => a -> [(a,b)] -> [b]
-findKey k t = [v | (k',v) <- t, k == k']
+find' :: Eq a => a -> [(a,b)] -> [b]
+find' k t = [v | (k',v) <- t, k == k']
 
 -- 5.3 zip function
 
@@ -124,5 +124,10 @@ pyths n = [(x, y, z)| x <- [1..n], y <- [1..n], z <- [1..n], x^2 + y^2 == z^2]
 
 perfects :: Int -> [Int]
 perfects n = [y| y <- [1..n], sum [x | x <- factors y, x /= y ] == y]
+
+-- 5.7.8
+
+positions' :: Eq a => a -> [a] -> [Int]
+positions' x xs = find' x (zip xs [x | x <- [0..(length xs)]])
 
 

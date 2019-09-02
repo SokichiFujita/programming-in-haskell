@@ -27,7 +27,7 @@ primes 5
 primes 17
 primes 100
 
-findKey 'b' [('a',1),('b',2),('c',3),('b',4)]
+find' 'b' [('a',1),('b',2),('c',3),('b',4)]
 
 
 -- 5.3
@@ -127,4 +127,11 @@ perfects 500
 
 concat [[(x, y)| x <- [1, 2, 3]] | y <- [4,5,6]]
 
+-- 5.7.8
+
+let tt = [2,3,4,1,5,1,2,4]
+
+find' 1 (zip tt [x | x <- [0..length tt]])
+
+positions 1 tt
 
