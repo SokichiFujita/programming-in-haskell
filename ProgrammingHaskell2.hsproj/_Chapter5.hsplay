@@ -109,14 +109,17 @@ square 3
 
 replicate' 3 True
 
+-- 5.7.5
 
 pyths 10
 
+-- 5.7.6
 
+factors 4
+factors 6
 
-
-
-
+perfects 6
+perfects 
 
 
 

@@ -9,7 +9,6 @@ import Data.Char -- for 5.5
 concat' :: [[a]] -> [a]
 concat' xss = [x | xs <- xss, x <- xs]
 
-
 firsts :: [(a,b)] -> [a]
 firsts ps = [x | (x,_) <- ps]
 
@@ -121,6 +120,9 @@ replicate' n x = [x | _ <- [1..n]]
 pyths :: Int -> [(Int, Int, Int)]
 pyths n = [(x, y, z)| x <- [1..n], y <- [1..n], z <- [1..n], x^2 + y^2 == z^2]
 
+-- 5.7.6
 
+perfects :: Int -> [Int]
+perfects n = [y| y <- [1..n], sum [x | x <- factors y, x /= y ] == y]
 
 
