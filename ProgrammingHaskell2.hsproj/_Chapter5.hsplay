@@ -99,14 +99,15 @@ sum [x^2 | x <- [1..100]]
 
 -- 5.7.2
 
-
-
 grid 1 2
 
+-- 5.7.3
 
 square 3
 
+-- 5.7.4
 
+replicate' 3 True
 
 
 

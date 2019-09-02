@@ -109,9 +109,12 @@ grid x y = [(x,y)| x <- [0..x], y <- [0..y]]
 -- 5.7.3
 
 square :: Int -> [(Int,Int)]
-square x = [(a,b) | (a,b) <- grid x x, a = b]
+square x = [(a,b) | (a,b) <- grid x x, a /= b]
 
+-- 5.7.4
 
+replicate' :: Int -> a -> [a]
+replicate' n x = [x | _ <- [1..n]] 
 
 
 
