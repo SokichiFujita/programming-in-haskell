@@ -130,4 +130,17 @@ perfects n = [y| y <- [1..n], sum [x | x <- factors y, x /= y ] == y]
 positions' :: Eq a => a -> [a] -> [Int]
 positions' x xs = find' x (zip xs [x | x <- [0..(length xs)]])
 
+-- 5.7.9
+
+scalarproduct :: [Int] -> [Int] -> Int
+scalarproduct xs ys = sum [x * y |(x,y) <- zip xs ys]
+
+
+
+
+
+
+
+
+
 

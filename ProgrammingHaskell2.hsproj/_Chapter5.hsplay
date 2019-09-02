@@ -135,3 +135,12 @@ find' 1 (zip tt [x | x <- [0..length tt]])
 
 positions 1 tt
 
+-- 5. 7.9
+
+let aa = [1,2,3]
+let bb = [4,5,6]
+
+sum [x*y|(x,y)<- zip aa bb ]
+scalarproduct aa bb
+
+
