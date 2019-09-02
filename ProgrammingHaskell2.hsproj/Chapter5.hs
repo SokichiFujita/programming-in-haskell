@@ -116,8 +116,10 @@ square x = [(a,b) | (a,b) <- grid x x, a /= b]
 replicate' :: Int -> a -> [a]
 replicate' n x = [x | _ <- [1..n]] 
 
+-- 5.7.5
 
-
+pyths :: Int -> [(Int, Int, Int)]
+pyths n = [(x, y, z)| x <- [1..n], y <- [1..n], z <- [1..n], x^2 + y^2 == z^2]
 
 
 
