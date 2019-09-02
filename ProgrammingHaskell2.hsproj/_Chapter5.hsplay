@@ -84,8 +84,6 @@ freqs "aabbbbccccddddeeee"
 rotate 3 [1,2,3,4,5]
 
 
-[chisqr (rotate n table') table | n <- [0..25]]
-
 crack "kdvnhoo lv ixq"
 crack "vscd mywzboroxcsyxc kbo ecopev"
 
@@ -135,7 +133,7 @@ find' 1 (zip tt [x | x <- [0..length tt]])
 
 positions 1 tt
 
--- 5. 7.9
+-- 5.7.9
 
 let aa = [1,2,3]
 let bb = [4,5,6]
@@ -143,4 +141,29 @@ let bb = [4,5,6]
 sum [x*y|(x,y)<- zip aa bb ]
 scalarproduct aa bb
 
+-- 5.7.10
+
+isLower 'a'
+isLower 'A'
+isUpper 'a'
+isUpper 'A'
+toUpper 'a'
+toLower 'A'
+
+shift' 3 'A'
+shift' 3 'a'
+
+encode' 3 "HASKELL IS FUN"
+encode' (-3) "KDVNHOO LV IXQ"
+
+encode' 3 "haskell is fun"
+encode' (-3) "kdvnhoo lv ixq"
+
+freqs' "aAbB"
+
+crack' "kdvnhoo lv ixq"
+crack' "KDVNHOO LV IXQ"
+
+crack (encode 3 "apple is orange")
+crack (encode 3 "APPLE IS ORANGE")
 
