@@ -80,7 +80,12 @@ sumdown n | n == 0 = 0
           | n >= 0  = n + sumdown (n-1)
 
 
+-- 6.8.3
 
+(^^^) :: Int -> Int -> Int
+x ^^^ 0 = 1
+x ^^^ 1 = x
+x ^^^ n = x * x ^^^ (n -1)
 
 
 
