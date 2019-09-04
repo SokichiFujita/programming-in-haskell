@@ -68,8 +68,8 @@ odd' n = even (n-1)
 -- let a = -1, then fac (-1) doesn't stop.
 
 fac'' :: Int -> Int
-fac'' n | n == 0    = 1
-        | n >  0    = n * fac'' (n-1)
+fac'' n | n == 0 = 1
+        | n >  0 = n * fac'' (n-1)
 
 -- above fac'' throws exception when arg < 0
 
@@ -77,7 +77,7 @@ fac'' n | n == 0    = 1
 
 sumdown :: Int -> Int
 sumdown n | n == 0 = 0
-          | n >= 0  = n + sumdown (n-1)
+          | n >= 0 = n + sumdown (n-1)
 
 
 -- 6.8.3
@@ -132,9 +132,14 @@ elem' y []     = False
 elem' y (x:xs) | y == x = True
                | y /= x = False
 
+-- 6.8.7
 
-
-
+merge :: Ord a => [a] -> [a] -> [a]
+merge l [] = l
+merge [] l = l
+merge (x:xs) (y:ys) | x < y = [x] ++ merge xs (y:ys)
+                    | x > y = [y] ++ merge (x:xs) ys
+ 
 
 
 
