@@ -139,7 +139,19 @@ merge l [] = l
 merge [] l = l
 merge (x:xs) (y:ys) | x < y = [x] ++ merge xs (y:ys)
                     | x > y = [y] ++ merge (x:xs) ys
- 
+
+-- 6.8.8
+
+halve :: [a] -> ([a],[a])
+halve l = (take n l, drop ((length l) - n) l)
+  where n = length l `div` 2
+
+msort :: Ord a => [a] -> [a]
+msort [] = []
+msort [x] = [x]
+msort l = merge (msort l1) (msort l2) 
+  where (l1, l2) = halve l
+
 
 
 
