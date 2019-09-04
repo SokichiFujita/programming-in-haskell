@@ -55,18 +55,25 @@ and' [True, True]
 and' [False]
 and' []
 
+-- 6.8.6.b
 
 concat' [[1]]
 concat' [[1,2],[3,4,5]]
 concat' [[]]
 
+-- 6.8.6.c
+
 replicate' 1 9
 replicate' 2 9
 replicate' 3 9 
 
+-- 6.8.6.d
+
 [1,2,3,4] !!! 0
 [1,2,3,4] !!! 1
 [1,2,3,4] !!! 2
+
+-- 6.8.6.e
 
 elem' 1 [1,2,3]
 elem' 0 [1,2,3]
