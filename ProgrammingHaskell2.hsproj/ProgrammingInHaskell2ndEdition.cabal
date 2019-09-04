@@ -15,8 +15,8 @@ executable ProgrammingHaskell2
         base -any
     default-language: Haskell2010
     other-modules:
-        Chapter3
         Chapter4
+        Chapter3
         Chapter5
         Chapter6
 

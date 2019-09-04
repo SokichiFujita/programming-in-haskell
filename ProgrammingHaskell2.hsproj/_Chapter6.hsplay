@@ -45,4 +45,37 @@ sumdown (-1)
 
 2 ^^^ 1
 
+euclid 27 6
+euclid 6 27
+
+-- 6.8.6.a
+
+and' [True, False]
+and' [True, True]
+and' [False]
+and' []
+
+
+concat' [[1]]
+concat' [[1,2],[3,4,5]]
+concat' [[]]
+
+replicate' 1 9
+replicate' 2 9
+replicate' 3 9 
+
+[1,2,3,4] !!! 0
+[1,2,3,4] !!! 1
+[1,2,3,4] !!! 2
+
+elem' 1 [1,2,3]
+elem' 0 [1,2,3]
+elem' 1 []
+
+
+
+
+
+
+
 
