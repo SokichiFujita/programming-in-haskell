@@ -26,9 +26,47 @@ product' [1,2,3,4]
 
 sum'' [1,2,3,4]
 
+or [True, False, True]
+and [True, False]
+and [True, True, True]
+
+
 -- 7.5
 
 twice' (*2) 10
 
-twice' id' 10
+-- 7.6
+
+bin2int [1,0,1,1]
+bin2int' [1,0,1,1]
+bin2int' [1]
+
+make8 [1,0,1,1]
+
+int2bin 13
+
+encode "abc"
+encode "hello"
+
+transmit "higher-order functions are easy"
+
+
+-- 7.7
+
+-- 7.7.1
+
+count "Red" votes
+
+rmdups votes
+
+result votes
+
+snd ("aaa", 1)
+
+winner votes
+
+-- 7.7.2
+
+
+
 
