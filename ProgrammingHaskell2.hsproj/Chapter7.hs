@@ -90,6 +90,47 @@ winner :: Ord a => [a] -> a
 winner = snd . last . result
 
 
+-- 7.7.2
+
+ballots :: [[String]]
+ballots = [["Red", "Green"],
+           ["Blue"],
+           ["Green", "Red", "Blue"], 
+           ["Blue", "Green", "Red"], ["Green"]]
+rmempty :: Eq a => [[a]] -> [[a]]
+rmempty = filter (/= [])
+
+elim :: Eq a => a -> [[a]] -> [[a]]
+elim x = map (filter (/= x))
+
+rank :: Ord a => [[a]] -> [a]
+rank = map snd . result . map head
+
+winner' :: Ord a => [[a]] -> a
+winner' bs = case rank (rmempty bs) of
+  [c] ->c
+  (c:cs) -> winner' (elim c bs)
+
+
+-- 7.9
+
+-- 7.9.1
+
+mf :: (a -> b) -> (a -> Bool) -> [a] -> [b]
+mf f p l = map f (filter p l)
+
+-- 7.9.2
+
+
+
+
+
+
+
+
+
+
+
 
 
 
