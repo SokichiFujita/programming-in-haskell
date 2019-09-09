@@ -131,6 +131,28 @@ any' f l = length (filter f l) > 0
 
 -- c
 
+takeWhile' :: (a -> Bool) -> [a] -> [a]
+takeWhile' f [] = []
+takeWhile' f (x:xs) | f x == True = x : takeWhile' f xs
+                    | otherwise   = []
+
+-- d
+
+dropWhile' :: (a -> Bool) -> [a] -> [a]
+dropWhile' f [] = []
+dropWhile' f (x:xs) | f x ==  True = dropWhile' f xs
+                    | otherwise   = x : dropWhile' f xs
+
+
+
+
+
+
+
+
+
+
+
 
 
 
