@@ -121,20 +121,18 @@ mf f p l = map f (filter p l)
 
 -- 7.9.2
 
+-- a
+all' :: (a -> Bool) -> [a] -> Bool
+all' f l = length (filter f l) == length l
+
+-- b
+any' :: (a -> Bool) -> [a] -> Bool
+any' f l = length (filter f l) > 0
+
+-- c
 
 
 
-
-
-
-
-
-
-
-
-
-
--- 7.8
 
 
 
