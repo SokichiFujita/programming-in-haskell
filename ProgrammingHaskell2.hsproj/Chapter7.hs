@@ -144,6 +144,22 @@ dropWhile' f (x:xs) | f x ==  True = dropWhile' f xs
                     | otherwise   = x : dropWhile' f xs
 
 
+-- 7.9.3
+
+map'' :: (a -> b) -> [a] -> [b]
+map'' f [] = []
+map'' f (x:xs) = f x : map'' f xs
+
+map''' :: (a -> b) -> [a] -> [b]
+map''' f = foldr (\x xs -> f x : xs) []
+
+filter'' :: (a -> Bool) -> [a] -> [a]
+filter'' f [] = []
+filter'' f (x:xs) | f x == True = x : filter'' f xs 
+                  | otherwise   = filter'' f xs
+
+filter''' :: (a -> Bool) -> [a] -> [a]
+filter''' f = foldr (\x xs -> if f x == True then x : xs else xs) []
 
 
 
