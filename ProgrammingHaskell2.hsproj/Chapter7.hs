@@ -162,10 +162,14 @@ filter''' :: (a -> Bool) -> [a] -> [a]
 filter''' f = foldr (\x xs -> if f x == True then x : xs else xs) []
 
 
+-- 7.9.4
 
+dec2int :: [Int] -> Int
+dec2int [] = 0
+dec2int (x:xs) = x * 10 ^ length xs + dec2int xs
 
-
-
+dec2int' :: [Int] -> Int
+dec2int' = foldl (\x xs -> x * 10 + xs) 0
 
 
 
