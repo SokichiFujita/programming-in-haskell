@@ -6,5 +6,14 @@
 goWest North
 goWest West
 
+let s1 = square 3
+area s1
 
+let c1 = Circle 3.0
+area c1
 
+safediv 15 5
+safediv 15 0
+
+safehead []
+safehead [1,2,3]
