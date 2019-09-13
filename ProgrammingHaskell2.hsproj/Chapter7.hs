@@ -171,6 +171,54 @@ dec2int (x:xs) = x * 10 ^ length xs + dec2int xs
 dec2int' :: [Int] -> Int
 dec2int' = foldl (\x xs -> x * 10 + xs) 0
 
+-- 7.9.5
+
+curry :: ((a,b) -> c) -> (a -> b -> c)
+curry f = \x y -> f (x,y)
+
+uncurry :: (a -> b -> c) -> ((a, b) -> c)
+uncurry f = \(x, y) -> f x y
+
+-- 7.9.6
+
+unfold p h t x 
+  | p x = []
+  | otherwise = h x : unfold p h t (t x)
+
+int2bin' :: Int -> [Bit]
+int2bin' 0 = []
+int2bin' n = n `mod` 2 : int2bin' (n `div` 2)
+
+int2bin'' :: Int -> [Bit]
+int2bin'' = unfold (== 0) (`mod` 2) (`div` 2)
+
+
+chop8' :: [Bit] -> [[Bit]]
+chop8' []   = []
+chop8' bits = take 8 bits : chop8' (drop 8 bits)
+
+chop8'' :: [Bit] -> [[Bit]]
+chop8'' = unfold (== []) (take 8) (drop 8)
+
+map'''' :: (a -> b) -> [a] -> [b]
+map'''' f [] = []
+map'''' f (x:xs) = f x : map'''' f xs
+
+map''''' :: (a -> b) -> [a] -> [b]
+map''''' f = unfold null (f . head) tail
+
+iterate' :: (a -> a) -> a -> [a]
+iterate' f = unfold (\x -> False) id f
+
+-- 7.9.7
+
+-- 7.9.8
+
+-- 7.9.9
+
+-- 7.9.10
+
+
 
 
 
