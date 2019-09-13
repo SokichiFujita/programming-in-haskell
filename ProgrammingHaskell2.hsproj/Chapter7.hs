@@ -140,7 +140,7 @@ takeWhile' f (x:xs) | f x == True = x : takeWhile' f xs
 
 dropWhile' :: (a -> Bool) -> [a] -> [a]
 dropWhile' f [] = []
-dropWhile' f (x:xs) | f x ==  True = dropWhile' f xs
+dropWhile' f (x:xs) | f x == True = dropWhile' f xs
                     | otherwise   = x : dropWhile' f xs
 
 
@@ -215,6 +215,11 @@ iterate' f = unfold (\x -> False) id f
 -- 7.9.8
 
 -- 7.9.9
+
+altMap :: (a -> b) -> (a -> b) -> [a] -> [b]
+altMap f g [] = []
+altMap f g (x:xs) | (length xs) `mod` 2 == 0 = f x : altMap f g xs
+                  | otherwise = g x : altMap f g xs
 
 -- 7.9.10
 
