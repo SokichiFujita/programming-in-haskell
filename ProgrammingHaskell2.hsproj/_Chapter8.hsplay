@@ -17,3 +17,71 @@ safediv 15 0
 
 safehead []
 safehead [1,2,3]
+
+-- 8,3
+
+n2 = N 3
+
+
+-- 8.4
+
+add Zero Zero
+add (Succ (Succ Zero)) (Succ (Succ Zero))
+
+
+len l1
+len Nil
+
+occurs 3 t1
+occurs 10 t1
+occurs 3 (Leaf 3)
+occurs 1 (Leaf 3)
+
+flatten t1
+flatten (Leaf 3)
+
+-- 8.5
+
+F == F
+F == T
+F < T
+F > T
+show F
+read "F" :: BoolX
+read (show F) :: BoolX
+
+
+Rect 1.0 4.0 < Rect 2.0 3.0
+Rect 1.0 4.0 < Rect 4.0 1.0
+Rect 1.0 1.0 == Rect 1.0 1.0
+
+p1
+
+
+-- 8.9.1
+-- 0*1
+mult Zero (Succ Zero)
+-- 1*0
+mult (Succ Zero) Zero
+-- 1*1
+mult (Succ Zero) (Succ Zero)
+-- 2*1
+mult (Succ (Succ Zero)) (Succ Zero)
+-- 1*2
+mult (Succ Zero) (Succ (Succ Zero))
+-- 2*2
+mult (Succ (Succ Zero)) (Succ (Succ Zero))
+-- 3*2
+mult (Succ (Succ (Succ Zero))) (Succ (Succ Zero))
+-- 3*2
+mult (Succ (Succ Zero)) (Succ (Succ (Succ Zero)))
+
+
+
+
+
+
+
+
+
+
