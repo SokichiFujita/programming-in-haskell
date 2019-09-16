@@ -82,8 +82,8 @@ flatten (Node l x r) = flatten l ++ [x] ++ flatten r
 occurs' :: Ord a => a -> Tree a -> Bool
 occurs' x (Leaf y)                  = x == y
 occurs' x (Node l y r) | x == y     = True
-                       | x < y      = occurs x l
-                       | otherwise  = occurs x r
+                       | x < y      = occurs' x l
+                       | otherwise  = occurs' x r
 
 
 -- 8.5
@@ -117,11 +117,25 @@ mult (Succ m) n = add (mult m n) n
 
 -- 8.9.2
 
+-- bad implementation: using compare but not effective
+occurs'' :: Ord a => a -> Tree a -> Bool
+occurs'' x (Leaf y)                         = x == y
+occurs'' x (Node l y r) | compare x y == EQ = True
+                        | compare x y == LT = occurs'' x l
+                        | otherwise         = occurs'' x r
+
+occurs''' :: Ord a => a -> Tree a -> Bool
+occurs''' x (Leaf y)     = x == y
+occurs''' x (Node l y r) = case compare x y of
+                          EQ -> True
+                          LT -> occurs''' x l
+                          GT -> occurs''' x r
+
+-- occurs''': O(1)
+-- occurs, occurs', occurs'' = O(2)
 
 
-
-
-
+-- 8.9.3
 
 
 

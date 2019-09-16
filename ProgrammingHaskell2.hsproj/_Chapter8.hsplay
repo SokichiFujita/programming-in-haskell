@@ -40,6 +40,12 @@ occurs 1 (Leaf 3)
 flatten t1
 flatten (Leaf 3)
 
+occurs' 3 t1
+occurs' 10 t1
+occurs' 3 (Leaf 3)
+occurs' 1 (Leaf 3)
+
+
 -- 8.5
 
 F == F
@@ -59,6 +65,7 @@ p1
 
 
 -- 8.9.1
+
 -- 0*1
 mult Zero (Succ Zero)
 -- 1*0
@@ -77,8 +84,17 @@ mult (Succ (Succ (Succ Zero))) (Succ (Succ Zero))
 mult (Succ (Succ Zero)) (Succ (Succ (Succ Zero)))
 
 
+-- 8.9.2
 
+occurs'' 3 t1
+occurs'' 10 t1
+occurs'' 3 (Leaf 3)
+occurs'' 1 (Leaf 3)
 
+occurs''' 3 t1
+occurs''' 10 t1
+occurs''' 3 (Leaf 3)
+occurs''' 1 (Leaf 3)
 
 
 
