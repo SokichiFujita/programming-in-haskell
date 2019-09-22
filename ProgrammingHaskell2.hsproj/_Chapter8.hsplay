@@ -96,7 +96,22 @@ occurs''' 10 t1
 occurs''' 3 (Leaf 3)
 occurs''' 1 (Leaf 3)
 
+5 `div` 2
+7 `div` 2
 
+splitList [1,2,3,4,5]
+splitList [1,2,3,4]
+splitList [1,2,3]
+splitList [1,2]
+splitList [1]
+
+
+-- 8.9.3
+
+let t2 = Leaf' 1
+let t3 = Node' (Node' (Leaf' 2)(Leaf' 1)) (Leaf' 3)
+numOfLeaf t2
+numOfLeaf t3
 
 
 

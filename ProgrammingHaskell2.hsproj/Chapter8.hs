@@ -137,6 +137,27 @@ occurs''' x (Node l y r) = case compare x y of
 
 -- 8.9.3
 
+data Tree' a = Leaf' a | Node' (Tree' a) (Tree' a) deriving (Eq, Ord, Show, Read)
+
+numOfLeaf :: Tree' a -> Int
+numOfLeaf (Leaf' a) = 1
+numOfLeaf (Node' l r) = numOfLeaf l + numOfLeaf r
+
+
+
+
+-- 8.9.4
+
+splitList :: [a] -> [[a]]
+splitList [] = []
+splitList [a] = [[a]]
+splitList l = [take n l, drop ((length l) - n - m) l]
+  where n = length l `div` 2
+        m = length l `mod` 2
+
+balance :: [a] -> Tree a 
+balance [a] = Leaf a
+balance l   = splitList l  
 
 
 
