@@ -143,6 +143,10 @@ numOfLeaf :: Tree' a -> Int
 numOfLeaf (Leaf' a) = 1
 numOfLeaf (Node' l r) = numOfLeaf l + numOfLeaf r
 
+balanced :: Tree' a -> Bool
+balanced (Leaf' a) = True
+balanced (Node' (Leaf' l) (Leaf' r)) = True
+balanced (Node' l r) = abs (numOfLeaf l - numOfLeaf r) < 2
 
 
 
@@ -155,10 +159,9 @@ splitList l = [take n l, drop ((length l) - n - m) l]
   where n = length l `div` 2
         m = length l `mod` 2
 
-balance :: [a] -> Tree a 
-balance [a] = Leaf a
-balance l   = splitList l  
-
+createBTree :: [a] -> Tree' a 
+createBTree [a] = Leaf' a
+createBTree xs = Node' (createBTree l) (createBTree r) where [l, r] = splitList xs
 
 
 

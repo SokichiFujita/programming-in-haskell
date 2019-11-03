@@ -109,10 +109,29 @@ splitList [1]
 -- 8.9.3
 
 let t2 = Leaf' 1
-let t3 = Node' (Node' (Leaf' 2)(Leaf' 1)) (Leaf' 3)
+let t3 = Node' (Leaf' 1) (Leaf' 2)
+let t4 = Node' (Node' (Leaf' 1)(Leaf' 2)) (Leaf' 10)
+
 numOfLeaf t2
 numOfLeaf t3
+balanced t2
+balanced t3
+balanced t4
 
 
+-- 8.9.4
+
+splitList [1,2,3,9,9,9,9,8]
+splitList [1,2]
+
+createBTree [1]
+createBTree [1,2]
+createBTree [1,2,3,4]
+createBTree [1,2,3,4,5]
+
+balanced (createBTree [1])
+balanced (createBTree [1,2])
+balanced (createBTree [1,2,3,4])
+balanced (createBTree [1,2,3,4,5])
 
 
